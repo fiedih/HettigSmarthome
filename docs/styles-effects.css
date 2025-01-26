@@ -1,0 +1,26 @@
+@keyframes pulseBrightness {
+    0%, 100% {
+      filter: brightness(90%);
+    }
+    50% {
+      filter: brightness(130%);
+    }
+  }
+  
+  @keyframes blurEffect {
+    0%, 100% {
+      filter: blur(0px);
+    }
+    50% {
+      filter: blur(3px);
+    }
+  }
+  
+  @keyframes zoomEffect {
+    0% {
+      background-size: 100%;
+    }
+    100% {
+      background-size: 120%;
+    }
+  }

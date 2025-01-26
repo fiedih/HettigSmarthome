@@ -3,32 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Statische Webseite</title>
+  <title>Hettig Smarthome - Ihr Dienstleister im Raum Aachen</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home/styles-home.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <h1>
+        <a href="home/home.html" target="content">Smarthome AC</a>
+      </h1>
+    </div>
+    <!-- Navigationsleiste -->
+    <nav class="sidebar">
       <ul>
-        <li><a href="#dienstleistungen">Dienstleistungen</a></li>
-        <li><a href="#ueber-uns">Über uns</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="home/home.html" target="content">Home</a></li>
+        <li><a href="dienstleistungen/dienstleistungen.html" target="content">Dienstleistungen</a></li>
+        <li><a href="ueber-uns.html" target="content">Über uns</a></li>
+        <li><a href="kontakt.html" target="content">Kontakt</a></li>
       </ul>
-    </aside>
-    <main class="content">
-      <section id="dienstleistungen">
-        <h1>Dienstleistungen</h1>
-        <p>Beschreibung von Dienstleistungen.</p>
-      </section>
-      <section id="ueber-uns">
-        <h1>Über uns</h1>
-        <p>Informationen über Unternehmen und Projekt.</p>
-      </section>
-      <section id="kontakt">
-        <h1>Kontakt</h1>
-        <p>Email: carlfriedrich.hettig@gmx.de<br>Telefon: 123456789</p>
-      </section>
-    </main>
+    </nav>
   </div>
+
+  <!-- Inhaltsbereich -->
+  <div class="content-container">
+    <iframe class="content" name="content" src="dienstleistungen/dienstleistungen.html" style="height: 100vh;"></iframe>
+  </div>
+  <!--
+  <footer class="footer">
+    <p>&copy; 2023 Hettig Smarthome. Alle Rechte vorbehalten.</p>
+  </footer>
+  -->
 </body>
+<script>
+  document.querySelectorAll('.sidebar ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('.sidebar ul li a').forEach(el => el.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
 </html>

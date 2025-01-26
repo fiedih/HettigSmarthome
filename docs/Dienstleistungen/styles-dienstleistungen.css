@@ -1,0 +1,27 @@
+/* Dienstleistungsseite */
+.service-page {
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory; /* Snap-Scrolling aktivieren */
+  overflow-y: scroll; /* Ermöglicht vertikales Scrollen */
+  height: 100vh; /* Volle Bildschirmhöhe */
+}
+
+/* Abschnitte */
+.section {
+  height: 100vh; /* Jeder Abschnitt nimmt die gesamte Bildschirmhöhe ein */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  scroll-snap-align: start; /* Jeder Abschnitt wird beim Scrollen ausgerichtet */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Unterschiedliche Farben für Abschnitte */
+#service1 { background-color: #1e3a8a; } /* Dunkelblau */
+#service2 { background-color: #1f2937; } /* Anthrazit */
+#service3 { background-color: #065f46; } /* Dunkelgrün */
+#service4 { background-color: #6b21a8; } /* Lila */

@@ -1,0 +1,34 @@
+/* Spezifische Stile für die Home-Seite */
+.home {
+    animation: zoomEffect 10s ease-in-out infinite alternate;
+    background: url('../pics/Background_components.jpg') no-repeat center center fixed;
+    background-size: cover /* Bildgröße anpassen */;
+    background-color: #000;
+    height: 90vh; /* Volle Höhe des Bildschirms - Header */
+    width: 100vw; /* Volle Breite des Bildschirms - Header */
+    display: flex; /* Flexbox Layout */
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    text-align: center;  /* Text zentrieren */
+    font-weight: bold; /* Dick gedruckt */
+    font-size: 1.2em; /* Groß */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Schattiert */
+}
+
+@keyframes zoomEffect {
+    0%, 100% {
+        filter: brightness(90%);
+    }
+    50% {
+        filter: brightness(130%);
+    }
+}
+
+@keyframes zoomEffect {
+  0%, 100% {
+    background-size: 100%;
+  }
+  50% {
+    background-size: 110%;
+  }
+}
